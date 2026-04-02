@@ -1,38 +1,66 @@
 body {
     font-family: Arial, sans-serif;
-    background: #1e1e1e;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
     margin: 0;
-    padding: 20px;
 }
 
-h1 {
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.3);
+}
+
+nav a {
+    margin-left: 15px;
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 120px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2196f3;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1976d2;
 }
 
 #gameGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+    padding: 20px;
 }
 
 .gameCard {
-    background: #333;
-    padding: 10px;
-    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.gameCard h2 {
-    margin: 5px 0;
-}
-
 .gameThumbnail {
     width: 100%;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -50,43 +78,29 @@ h1 {
     border: none;
 }
 
-button {
-    padding: 8px 15px;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 3px;
-    transition: background 0.3s;
-}
-
 .startButton {
-    background: #4CAF50;
-    color: white;
-}
-
-.startButton:hover {
-    background: #45a049;
+    background: #4caf50;
 }
 
 .stopButton {
     background: #f44336;
-    color: white;
-}
-
-.stopButton:hover {
-    background: #d32f2f;
 }
 
 .fullscreenButton {
-    background: #2196F3;
-    color: white;
     position: absolute;
     bottom: 5px;
     right: 5px;
+    background: #2196f3;
     padding: 5px 10px;
 }
 
-.fullscreenButton:hover {
-    background: #1976d2;
+.fixedFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(6px);
 }
